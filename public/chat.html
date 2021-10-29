@@ -131,12 +131,15 @@
     });
     console.log(nameLog);
     const name = nameLog;
-    socket.on('message', message => {
-        console.log(message);
-        // const chatItem = document.createElement('li');
-        // chatItem.textContent = `Bot chat: A user is connected to the room`;
-        // messages.appendChild(chatItem);
-    })
+    if (name != '') {
+        socket.on('message', message => {
+            console.log(message);
+            const chatItem = document.createElement('li');
+            chatItem.textContent = `Bot chat: A user is connected to the room`;
+            messages.appendChild(chatItem);
+        })
+
+    }
 
 
     socket.emit('joinRoom', name);
