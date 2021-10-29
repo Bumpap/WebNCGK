@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket io </title>
+  <style>
+    html,
+    body {
+      height: 20%;
+
+    }
+
+    html {
+      padding: auto;
+      margin: auto;
+
+    }
+
+    body {
+      align-items: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      background: var(--light-color);
+
+    }
+
+    .container {
+      border: 3px solid #73AD21;
+
+      max-width: 500px;
+      max-height: 100px;
+      margin: auto;
+      background: white;
+      padding: 150px;
+      align-items: center;
+      text-align: center;
+      background-color: blanchedalmond;
+
+    }
+
+    .nameLog {
+      border: 3px solid #73AD21;
+      width: 80%;
+      height: 50px;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    .join-chat {
+      background-color: #4CAF50;
+      width: 30%;
+      height: 50px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border: 2px solid green;
+      border-radius: 25px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <h1>Log in</h1>
+    <form id="chat-form" type="text" action="chat.html" onsubmit="return validateMyForm();">
+      <input type="text" name="nameLog" class="nameLog" id="nameLog" placeholder="Input your name"><br><br>
+      <!-- <input type="text" name="roomLog" id="roomLog" placeholder="Input your room"> -->
+      <button type="submit" class="join-chat" id="join-chat">Join chat</button>
+    </form>
+  </div>
+</body>
+
+<!-- js -->
+<script type="text/javascript">
+  function validateMyForm() {
+    var name = document.getElementById("nameLog");
+    if (name.value.length == 0) {
+      alert("Please input your name");
+      return false;
+    }
+    return true;
+
+  }
+</script>
+
+</html>
